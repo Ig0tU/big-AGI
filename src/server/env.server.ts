@@ -66,6 +66,14 @@ export const env = createEnv({
     // LLM: Google AI's Gemini
     GEMINI_API_KEY: z.string().optional(),
 
+    // LLM: Vertex AI / GCP ADC (issue #1134 — Option A separate vendor)
+    // Refresh via external sidecar/cron, e.g.:
+    //   export VERTEX_AI_BEARER_TOKEN=$(gcloud auth application-default print-access-token)
+    VERTEX_AI_BEARER_TOKEN: z.string().optional(),
+    VERTEX_AI_PROJECT_ID: z.string().optional(),
+    VERTEX_AI_LOCATION: z.string().optional(),
+    GOOGLE_CLOUD_PROJECT: z.string().optional(),
+
     // LLM: Groq
     GROQ_API_KEY: z.string().optional(),
 
@@ -157,4 +165,3 @@ export const env = createEnv({
     NEXT_PUBLIC_PLANTUML_SERVER_URL: process.env.NEXT_PUBLIC_PLANTUML_SERVER_URL,
   },
 });
-

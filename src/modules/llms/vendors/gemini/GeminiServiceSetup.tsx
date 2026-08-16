@@ -94,8 +94,6 @@ export function GeminiServiceSetup(props: { serviceId: DModelsServiceId }) {
       Gemini has advanced <Link href='https://ai.google.dev/docs/safety_setting_gemini' target='_blank' noLinkStyle>
       safety settings</Link> on: harassment, hate speech,
       sexually explicit, civic integrity, and dangerous content, in addition to non-adjustable built-in filters.
-      {/*By default, the model will block content with <em>medium and above</em> probability*/}
-      {/*of being unsafe.*/}
     </FormHelperText>}
 
     {showAdvanced && <FormTextField
